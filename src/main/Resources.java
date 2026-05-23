@@ -2,16 +2,10 @@ package main;
 
 public class Resources {
     //resources will be taken from this class
-    private int population;
-    private int goods;
-    private int lifestyle;
-
-    public Resources(int goods, int lifestyle, int population) {
-        this.goods = goods;
-        this.lifestyle = lifestyle;
-        this.population = population;
-    }
-
+    private int population=0;
+    private int goods=0;
+    private int lifestyle=0;
+    
     public int getGoods() {
         return goods;
     }
