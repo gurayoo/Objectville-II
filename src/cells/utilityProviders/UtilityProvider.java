@@ -1,5 +1,8 @@
 package cells.utilityProviders;
-
-public abstract class UtilityProvider {
+import cells.Cell;
+public abstract class UtilityProvider implements Cell{
     //other utilityProviders classes will inherit from here.
+    int currentCapacity;
+
+    public abstract void resetCapacity() ;
 }
