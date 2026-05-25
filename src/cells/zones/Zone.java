@@ -1,6 +1,7 @@
 package cells.zones;
 
 import cells.Cell;
+import main.Resources;
 
 public abstract class Zone implements Cell {
     //other zones classes will inherit from here.
@@ -95,7 +96,7 @@ public abstract class Zone implements Cell {
     }
 
     @Override
-    public void tick() {
+    public void tick() {  //update cells after tick
         int m=getM();
         if(m==0){
             level=0;
@@ -115,4 +116,6 @@ public abstract class Zone implements Cell {
     public void setCurrentOutput(int currentOutput) {
         this.currentOutput = currentOutput;
     }
+    // this will use in zones package
+    Resources resources = new Resources();
 }
