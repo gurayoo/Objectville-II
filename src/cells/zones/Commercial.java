@@ -10,12 +10,12 @@ public class Commercial extends Zone {
     @Override
     public void calculateLevel() { //
         int minlevel =0;
-        if (getElectricity() > 0 && getWater() > 0 && resources.getPopulation() > 0  && getInternet() > 0 && resources.getGoods() >0){
+        if (getElectricity() > 0 && getWater() > 0 &&getCurrentPopulation() > 0  && getInternet() > 0 &&getCurrentGoods() >0){
             minlevel++;
             if (isHasSecurity() == true ){
                 minlevel++;
 
-                if (resources.getPopulation() > getCurrentOutput() && resources.getGoods() > getCurrentOutput()){
+                if (getCurrentPopulation() > getCurrentOutput() && getCurrentGoods() > getCurrentOutput()){
                     minlevel++;
                 }
             }
@@ -29,7 +29,7 @@ public class Commercial extends Zone {
         if (getLevel() == 0) setCurrentOutput(0);
         if (getLevel() == 1) setCurrentOutput(a);
         if (getLevel() == 2) setCurrentOutput(2*a);
-        if (getLevel() == 3) setCurrentOutput((2*a)+ Math.min(resources.getPopulation(), resources.getGoods()));
+        if (getLevel() == 3) setCurrentOutput((2*a)+ Math.min(getCurrentPopulation(), getCurrentGoods()));
     }
 
     @Override

@@ -15,7 +15,9 @@ public abstract class Zone implements Cell {
     private int water;
     private int internet;
     private int currentOutput=0;
-
+    private int currentPopulation = 0;
+    private int currentGoods = 0;
+    private int currentLifestyle = 0;
     public int getLevel() {
         return level;
     }
@@ -75,12 +77,15 @@ public abstract class Zone implements Cell {
 
     public void reset(){
 
-         hasSecurity = false;
-         hasHealth = false;
-         hasEducation= false;
-         electricity =0;
-         water=0;
-         internet= 0;
+        hasSecurity = false;
+        hasHealth = false;
+        hasEducation= false;
+        electricity=0;
+        water=0;
+        internet= 0;
+        currentGoods=0;
+        currentPopulation=0;
+        currentLifestyle=0;
 
     }
     public abstract int getM();
@@ -116,6 +121,28 @@ public abstract class Zone implements Cell {
     public void setCurrentOutput(int currentOutput) {
         this.currentOutput = currentOutput;
     }
-    // this will use in zones package
-    Resources resources = new Resources();
+
+    public int getCurrentGoods() {
+        return currentGoods;
+    }
+
+    public void setCurrentGoods(int currentGoods) {
+        this.currentGoods = currentGoods;
+    }
+
+    public int getCurrentLifestyle() {
+        return currentLifestyle;
+    }
+
+    public void setCurrentLifestyle(int currentLifestyle) {
+        this.currentLifestyle = currentLifestyle;
+    }
+
+    public int getCurrentPopulation() {
+        return currentPopulation;
+    }
+
+    public void setCurrentPopulation(int currentPopulation) {
+        this.currentPopulation = currentPopulation;
+    }
 }
