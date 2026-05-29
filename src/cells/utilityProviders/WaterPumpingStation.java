@@ -16,4 +16,9 @@ public class WaterPumpingStation extends UtilityProvider {
     public char getChar() {
         return 'W';
     }
+
+    @Override
+    public int getCapacity() {
+        return MAX_WATER;
+    }
 }

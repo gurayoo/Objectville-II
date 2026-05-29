@@ -15,4 +15,9 @@ public class InternetHub extends UtilityProvider {
     public char getChar() {
         return 'T';
     }
+
+    @Override
+    public int getCapacity() {
+        return  MAX_INTERNET;
+    }
 }

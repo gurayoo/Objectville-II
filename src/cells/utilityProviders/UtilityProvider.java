@@ -5,4 +5,5 @@ public abstract class UtilityProvider implements Cell{
     int currentCapacity;
 
     public abstract void resetCapacity() ;
+    public abstract int getCapacity();
 }

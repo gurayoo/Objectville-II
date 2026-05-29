@@ -17,4 +17,9 @@ public class PowerPlant extends UtilityProvider {
     public char getChar() {
         return 'P';
     }
+
+    @Override
+    public int getCapacity() {
+        return MAX_ELECTRICITY;
+    }
 }
