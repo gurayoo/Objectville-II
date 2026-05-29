@@ -69,12 +69,10 @@ public class GameEngine {
         for (int x = 0; x < map.length; x++) {
             for (int y = 0; y < map[0].length; y++) {
                 Cell cell = map[x][y];
-
-
+                //gets current cell
                 if (cell instanceof Zone) {
                     Zone zone = (Zone) cell;
                     int supply = zone.getCurrentOutput();
-
                     if (zone instanceof Housing) {
                         resources.setPopulation(resources.getPopulation() + supply);
                     }
