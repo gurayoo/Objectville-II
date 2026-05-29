@@ -91,14 +91,14 @@ public class GameEngine {
         for (int x = 0; x < map.length; x++) {
             for (int y = 0; y < map[0].length; y++) {
                 Cell cell = map[x][y];
-
+                //gets current cell
                 if (cell instanceof Zone) {
                     Zone zone = (Zone) cell;
                     int need = zone.getUtilityDemand();
-
+                    //gets the need from cell
                     if (zone instanceof Industrial) {
                         Industrial industrial = (Industrial) zone;
-
+                        //downcast to reach its own methods
                         if (resources.getPopulation() >= need) {
                             resources.setPopulation(resources.getPopulation() - need);
                             industrial.setCurrentPopulation(industrial.getCurrentPopulation() + need);
@@ -106,19 +106,21 @@ public class GameEngine {
                     }
                     else if (zone instanceof Commercial) {
                         Commercial commercial = (Commercial) zone;
-
+                        //downcast to reach its own methods
                         if (resources.getPopulation() >= need && resources.getGoods() >= need) {
                             resources.setPopulation(resources.getPopulation() - need);
                             resources.setGoods(resources.getGoods() - need);
-
+                            //decrease from the resources class like a bank and increase the cells resources
                             commercial.setCurrentPopulation(commercial.getCurrentPopulation() + need);
                             commercial.setCurrentGoods(commercial.getCurrentGoods() + need);
                         }
                     }
                     else if (zone instanceof Housing) {
                         Housing housing = (Housing) zone;
+                        //downcast to reach its own methods
                         if (resources.getLifestyle() >= need) {
                             resources.setLifestyle(resources.getLifestyle() - need);
+                            //decrease from the resources class like a bank and increase the cells resources
                             housing.setCurrentLifestyle(housing.getCurrentLifestyle() + need);
                         }
                     }
