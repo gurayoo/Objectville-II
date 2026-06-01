@@ -1,7 +1,5 @@
 package cells.zones;
 
-import main.Resources;
-
 public class Industrial extends Zone{
     @Override
     public int getM() {  //specific rule of getm in industrial
@@ -9,7 +7,7 @@ public class Industrial extends Zone{
     }
 
     @Override
-    public void calculateLevel() { //
+    public void calculateLevel() {
         int minlevel =0;
         if (getElectricity() > 0 && getWater() > 0 && getCurrentPopulation() > 0){
             minlevel++;

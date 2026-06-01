@@ -1,8 +1,6 @@
 package cells.zones;
 
 import cells.Cell;
-import main.Resources;
-
 public abstract class Zone implements Cell {
     //other zones classes will inherit from here.
 
