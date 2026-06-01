@@ -5,7 +5,11 @@ public class Resources {
     private int population=0;
     private int goods=0;
     private int lifestyle=0;
-    
+    public void reset() {
+        population = 0;
+        goods = 0;
+        lifestyle = 0;
+    }
     public int getGoods() {
         return goods;
     }
