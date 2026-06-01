@@ -32,13 +32,7 @@ public class Industrial extends Zone{
     }
 
     @Override
-    public char getChar() {
-        return 'I';
+    public String getName() {
+        return "Industrial";
     }
-
-
-
-
-
-
 }
