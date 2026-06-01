@@ -6,8 +6,5 @@ public class Hospital extends Service {
         return 3;
     }
 
-    @Override
-    public char getChar() {
-        return 'D';
-    }
+
 }
