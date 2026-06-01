@@ -12,8 +12,6 @@ import cells.utilityProviders.WaterPumpingStation;
 import cells.zones.Commercial;
 import cells.zones.Housing;
 import cells.zones.Industrial;
-
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -21,8 +19,8 @@ import java.util.List;
 
 public class Reader {
     public static Cell[][] loadMap(String filePath) {
-        try (BufferedReader reader = Files.newBufferedReader(Paths.get(filePath))) {
-            List<String> list = reader.readAllLines();
+        try {
+            List<String> list =Files.readAllLines(Paths.get(filePath));
             if (list.isEmpty()) {
                 throw new IOException("ERROR!!!EMPTY LIST!!!");
             }
