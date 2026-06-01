@@ -8,7 +8,7 @@ public class Commercial extends Zone {
     }
 
     @Override
-    public void calculateLevel() { //
+    public void calculateLevel() {
         int minlevel =0;
         if (getElectricity() > 0 && getWater() > 0 &&getCurrentPopulation() > 0  && getInternet() > 0 &&getCurrentGoods() >0){
             minlevel++;

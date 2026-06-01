@@ -7,7 +7,6 @@ public class Housing extends Zone {
     }
 
     @Override
-    public void calculateLevel() { //
         int minlevel =0;
         if (getElectricity() > 0 && getWater() > 0 && getInternet() > 0){
             minlevel++;
